@@ -15,7 +15,7 @@ services:
       - ASPNETCORE_URLS=http://+:8080
     volumes:
       - ./Backend/media:/app/media
-      - ./Backend/camunda_challenge_dev.db:/app/camunda_challenge_dev.db
+      - ./Backend/animal_api.db:/app/animal_api.db
     networks:
       - app-network
 

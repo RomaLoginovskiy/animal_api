@@ -20,7 +20,7 @@ docker-compose up --build
 
 Then visit:
 - App: http://localhost:3000
-- API: http://localhost:5076
+- API: http://localhost:5076/swagger --> OpenAPI endpoint
 
 ```bash
 # Other useful commands
@@ -77,5 +77,12 @@ dotnet ef database update
 docker-compose down -v
 docker system prune -f
 ```
+
+**Docker Desktop asking for permissions?**
+Docker Desktop might request permission to access your project folder for volume mounts. This is normal and needed for:
+- Persisting database files
+- Persisting animals pictures
+
+Click "Allow" when prompted, or manually add your project folder in Docker Desktop → Settings → Resources → File Sharing.
 
 That's it!
