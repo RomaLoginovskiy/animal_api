@@ -145,5 +145,5 @@ Thumbs.db
 .dockerignore
 
 # Media files (uncomment if you don't want to track uploaded images)
- media/
+ media/.*
  uploads/
