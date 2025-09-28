@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animal Pictures</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Animal Pictures</h1>
+    
+    <div>
+        <label>Choose an animal:</label>
+        <select id="animalType">
+            <option value="Dog">Dog</option>
+            <option value="Duck">Duck</option>
+            <option value="Bear">Bear</option>
+        </select>
+    </div>
+    
+    <div>
+        <label>How many pictures:</label>
+        <input type="number" id="pictureCount" value="3" min="1" max="10">
+    </div>
+    
+    <div>
+        <label>Picture width (pixels):</label>
+        <input type="number" id="pictureWidth" value="300" min="100" max="1000">
+    </div>
+    
+    <div>
+        <label>Picture height (pixels):</label>
+        <input type="number" id="pictureHeight" value="300" min="100" max="1000">
+    </div>
+    
+    <button onclick="getPictures()">Get Pictures</button>
+    
+    <div id="loading" style="display: none;">Loading...</div>
+    <div id="error" style="display: none;"></div>
+    
+    <div id="pictures"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
