@@ -17,7 +17,6 @@ namespace animal_api.Services
             {
                 "dog" => $"https://place.dog/{width}/{height}",
                 "duck" => "https://random-d.uk/api/random",
-                "elephant" => $"https://picsum.photos/{width}/{height}",
                 "bear" => $"https://placebear.com/{width}/{height}",
                 _ => $"https://picsum.photos/{width}/{height}"
             };
