@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Text.Json;
 
-namespace camunda_challenge.Services
+namespace animal_api.Services
 {
     public class AnimalPicturesRestService : IAnimalPicturesApiService
     {

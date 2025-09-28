@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace camunda_challenge.Services
+namespace animal_api.Services
 {
     public interface IAnimalPicturesApiService
     {

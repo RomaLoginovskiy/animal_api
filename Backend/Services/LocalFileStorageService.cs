@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using camunda_challenge.Models;
+using animal_api.Models;
 using Microsoft.Extensions.Options;
 
-namespace camunda_challenge.Services
+namespace animal_api.Services
 {
     public class LocalFileStorageService : IBlobStorage
     {

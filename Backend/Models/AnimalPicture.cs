@@ -1,7 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace camunda_challenge.Models
+namespace animal_api.Models
 {
     public class AnimalPicture
     {

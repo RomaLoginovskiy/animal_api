@@ -1,6 +1,6 @@
 using System;
 
-namespace camunda_challenge.Models
+namespace animal_api.Models
 {
     public class AppSettings
     {

@@ -1,7 +1,7 @@
-using camunda_challenge.Repository;
-using camunda_challenge.Services;
-using camunda_challenge.Models;
-using camunda_challenge.Data;
+using animal_api.Repository;
+using animal_api.Services;
+using animal_api.Models;
+using animal_api.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -34,9 +34,9 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "Camunda Challenge API",
+        Title = "Animal API",
         Version = "v1",
-        Description = "API for Camunda Challenge project"
+        Description = "API for Animal API project"
     });
 });
 
@@ -44,13 +44,20 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
+// Ensure database is created and migrated
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<AnimalDbContext>();
+    context.Database.EnsureCreated();
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Camunda Challenge API v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Animal API v1");
         c.RoutePrefix = "swagger";
     });
 }

@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using camunda_challenge.Models;
-using camunda_challenge.Services;
-using camunda_challenge.Data;
+using animal_api.Models;
+using animal_api.Services;
+using animal_api.Data;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 
-namespace camunda_challenge.Repository
+namespace animal_api.Repository
 {
     public class AnimalRepository : IAnimalRepository
     {

@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using camunda_challenge.Models;
+using animal_api.Models;
 
-namespace camunda_challenge.Repository
+namespace animal_api.Repository
 {
     public interface IAnimalRepository
     {

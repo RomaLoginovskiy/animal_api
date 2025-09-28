@@ -1,10 +1,13 @@
 version: '3.8'
 
+name: animal_app
+
 services:
   backend:
     build:
       context: ./Backend
       dockerfile: Dockerfile
+    image: animal_api
     ports:
       - "5076:8080"
     environment:
@@ -20,6 +23,7 @@ services:
     build:
       context: ./Frontend
       dockerfile: Dockerfile
+    image: animal_frontend
     ports:
       - "3000:3000"
     depends_on:

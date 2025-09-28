@@ -58,3 +58,43 @@ function showError(message) {
     document.getElementById('error').style.display = 'block';
     document.getElementById('loading').style.display = 'none';
 }
+
+// Function to get the last inserted picture
+function getLastPicture() {
+    // Show loading message
+    document.getElementById('loading').style.display = 'block';
+    document.getElementById('error').style.display = 'none';
+    document.getElementById('pictures').innerHTML = '';
+    
+    var url = 'http://localhost:5076/api/Animal/last';
+    
+    fetch(url)
+        .then(function(response) {
+            if (response.ok) {
+                return response.blob();
+            } else {
+                throw new Error('Failed to get last picture');
+            }
+        })
+        .then(function(blob) {
+            showLastPicture(blob);
+        })
+        .catch(function(error) {
+            showError('Error getting last picture: ' + error.message);
+        });
+}
+
+// Function to show the last picture
+function showLastPicture(blob) {
+    var imageUrl = URL.createObjectURL(blob);
+    
+    var img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = 'Last inserted picture';
+    img.style.width = '300px';
+    img.style.height = '300px';
+    img.style.margin = '10px';
+    
+    document.getElementById('pictures').appendChild(img);
+    document.getElementById('loading').style.display = 'none';
+}

@@ -1,9 +1,9 @@
-using camunda_challenge.Models;
-using camunda_challenge.Repository;
-using camunda_challenge.Services;
+using animal_api.Models;
+using animal_api.Repository;
+using animal_api.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace camunda_challenge.Controllers
+namespace animal_api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

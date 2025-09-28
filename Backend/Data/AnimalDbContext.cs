@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using camunda_challenge.Models;
+using animal_api.Models;
 
-namespace camunda_challenge.Data
+namespace animal_api.Data
 {
     public class AnimalDbContext : DbContext
     {
