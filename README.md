@@ -68,7 +68,7 @@ Frontend/    # Simple HTML/JS interface
 **Database issues?** 
 ```bash
 cd Backend
-rm camunda_challenge_dev.db
+rm animal_api_<env>.db
 dotnet ef database update
 ```
 
